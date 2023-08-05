@@ -1,0 +1,525 @@
+{
+  "name": "symantec-management-center",
+  "label": "Symantec Management Center",
+  "description": "Symantec Management Center provides a unified management environment for the Symantec Security Platform portfolio of products. Management Center brings Symantec’s network, security, and cloud technologies to you under a single umbrella making it easier to deploy, manage, and monitor your security environment.",
+  "publisher": "Fortinet",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "version": "1.0.0",
+  "category": "Network Security",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "help_online": "",
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "name": "server_url",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "text",
+        "description": "Specify the URL of the Symantec Management Center server to which you will connect and perform the automated operations."
+      },
+      {
+        "title": "Username",
+        "name": "username",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "text",
+        "description": "Specify the username used to access the Symantec Management Center server to which you will connect and perform the automated operations."
+      },
+      {
+        "title": "Password",
+        "name": "password",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "password",
+        "description": "Specify the password used to access the Symantec Management Center server to which you will connect and perform the automated operations."
+      },
+      {
+        "title": "Verify SSL",
+        "description": "Specify whether the SSL certificate for the Symantec Management Center server is to be verified or not. By default, this option is set as True.",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "type": "checkbox",
+        "name": "verify_ssl",
+        "value": true
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "create_policy",
+      "annotation": "create_policy",
+      "category": "investigation",
+      "title": "Create Policy",
+      "description": "Creates a new policy object based on the parameters that you have specified.",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Policy name",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "name",
+          "tooltip": "Specify the name of the policy.",
+          "description": "Specify the name of the policy."
+        },
+        {
+          "title": "Content Type",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "contentType",
+          "tooltip": "Specify the content type of the policy.",
+          "description": "Specify the content type of the policy."
+        },
+        {
+          "title": "Description",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "description",
+          "tooltip": "Specify the description of the policy.",
+          "description": "Specify the description of the policy."
+        },
+        {
+          "title": "Reference ID",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "referenceId",
+          "tooltip": "Specify the reference ID of the policy.",
+          "description": "Specify the reference ID of the policy."
+        },
+        {
+          "title": "Tenant",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "tenant",
+          "tooltip": "Specify the tenant associated with this policy.",
+          "description": "Specify the tenant associated with this policy."
+        },
+        {
+          "title": "Author",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "author",
+          "tooltip": "Specify the author of the policy.",
+          "description": "Specify the author of the policy."
+        },
+        {
+          "title": "Shared",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "checkbox",
+          "name": "shared",
+          "tooltip": "Specify if you want to share the policy. By default the checkbox is set to False.",
+          "description": "Specify if you want to share the policy. By default the checkbox is set to False.",
+          "value": false
+        },
+        {
+          "title": "Replace Variables",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "replaceVariables",
+          "tooltip": "Specify if you want to replace the variables. By default the checkbox is set to True.",
+          "description": "Specify if you want to replace the variables. By default the checkbox is set to True.",
+          "value": true
+        }
+      ],
+      "output_schema": {
+        "uuid": "",
+        "name": "",
+        "contentType": "",
+        "description": "",
+        "referenceId": "",
+        "author": "",
+        "shared": "",
+        "replaceVariables": ""
+      }
+    },
+    {
+      "operation": "get_policies",
+      "annotation": "get_policies",
+      "category": "investigation",
+      "title": "Get Policies",
+      "description": "Retrieves a detailed list of policies from Symantec Management Center based on the parameters that you have specified.",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Author",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "author",
+          "tooltip": "Query filter parameter to filter by author.",
+          "description": "(Optional) Query filter parameter to filter by author."
+        },
+        {
+          "title": "Content Type",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "contentType",
+          "tooltip": "Query filter parameter to filter by content type.",
+          "description": "(Optional) Query filter parameter to filter by content type."
+        },
+        {
+          "title": "Description",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "description",
+          "tooltip": "Query filter parameter to filter by description.",
+          "description": "(Optional) Query filter parameter to filter by description."
+        },
+        {
+          "title": "Name",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "name",
+          "tooltip": "Query filter parameter to filter by author.",
+          "description": "(Optional) Query filter parameter to filter by author."
+        },
+        {
+          "title": "Reference ID",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "referenceId",
+          "tooltip": "Query filter parameter to filter by reference ID.",
+          "description": "(Optional) Query filter parameter to filter by reference ID."
+        },
+        {
+          "title": "Shared",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "checkbox",
+          "name": "author",
+          "tooltip": "Use this parameter to filter based on if the policy is shared or not shared.",
+          "description": "(Optional) Use this parameter to filter based on if the policy is shared or not shared."
+        },
+        {
+          "title": "Tenant",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "tenant",
+          "tooltip": "Query filter parameter to filter by tenant.",
+          "description": "(Optional) Query filter parameter to filter by tenant."
+        }
+      ],
+      "output_schema": [
+        {
+          "uuid": "",
+          "name": "",
+          "contentType": "",
+          "description": "",
+          "referenceId": "",
+          "tenant": "",
+          "author": "",
+          "shared": "",
+          "replaceVariables": ""
+        }
+      ]
+    },
+    {
+      "operation": "get_policy_details",
+      "annotation": "get_policy_details",
+      "category": "investigation",
+      "title": "Get Policy Details",
+      "description": "Retrieves the policy details based on the policy UUID that you have specified.",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Policy UUID",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "uuid",
+          "tooltip": "Specify the UUID of the policy.",
+          "description": "Specify the UUID of the policy."
+        }
+      ],
+      "output_schema": {
+        "uuid" : "",
+        "name" : "",
+        "contentType" : "",
+        "description" : "",
+        "referenceId" : "",
+        "tenant" : "",
+        "author" : "",
+        "shared" : "",
+        "replaceVariables" : ""
+      }
+    },
+    {
+      "operation": "update_policy",
+      "annotation": "update_policy",
+      "category": "investigation",
+      "title": "Update Policy",
+      "description": "Update the metadata based on the parameters that you have specified.",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Policy UUID",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "uuid",
+          "tooltip": "Specify the UUID of the policy.",
+          "description": "Specify the UUID of the policy."
+        },
+        {
+          "title": "Policy name",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "name",
+          "tooltip": "Specify the name of the policy.",
+          "description": "Specify the name of the policy."
+        },
+        {
+          "title": "Description",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "description",
+          "tooltip": "Specify the description of the policy.",
+          "description": "Specify the description of the policy."
+        },
+        {
+          "title": "Reference ID",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "referenceId",
+          "tooltip": "Specify the reference ID of the policy.",
+          "description": "Specify the reference ID of the policy."
+        },
+        {
+          "title": "Replace Variables",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "replaceVariables",
+          "tooltip": "Specify if you want to replace the variables. By default the checkbox is set to True.",
+          "description": "Specify if you want to replace the variables. By default the checkbox is set to True.",
+          "value": true
+        }
+      ],
+      "output_schema": {
+        "uuid": "",
+        "name": "",
+        "contentType": "",
+        "description": "",
+        "referenceId": "",
+        "author": "",
+        "shared": "",
+        "replaceVariables": ""
+      }
+    },
+    {
+      "operation": "delete_policy",
+      "annotation": "delete_policy",
+      "category": "investigation",
+      "title": "Delete Policy",
+      "description": "Delete a policy based on the parameters that you have specified.",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Policy UUID",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "uuid",
+          "tooltip": "Specify the UUID of the policy.",
+          "description": "Specify the UUID of the policy."
+        },
+        {
+          "title": "Force Delete",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "checkbox",
+          "name": "force",
+          "tooltip": "Set to true to for force the policy object to be removed even if it is referenced by another policy.",
+          "description": "Set to true to for force the policy object to be removed even if it is referenced by another policy.",
+          "value": false
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "add_policy_content",
+      "annotation": "add_policy_content",
+      "category": "investigation",
+      "title": "Add or Update Policy Content",
+      "description": "Add or update the content of the policy by creating a new version.",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Policy UUID",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "uuid",
+          "tooltip": "Specify the UUID of the policy.",
+          "description": "Specify the UUID of the policy."
+        },
+        {
+          "title": "Description",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "changeDescription",
+          "tooltip": "Specify the description of the policy content.",
+          "description": "Specify the description of the policy content."
+        },
+        {
+          "title": "Content",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "content",
+          "tooltip": "Specify the policy content. This varies depending on the content type.",
+          "description": "Specify the policy content. This varies depending on the content type."
+        },
+        {
+          "title": "Content Type",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "contentType",
+          "tooltip": "Specify the type of content. eg: URL_LIST",
+          "description": "Specify the type of content. eg: URL_LIST"
+        },
+        {
+          "title": "Schema Version",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "schemaVersion",
+          "tooltip": "Specify the schema version for the content. This value will correspond to the format of the content. eg: 1.0",
+          "description": "Specify the schema version for the content. This value will correspond to the format of the content. eg: 1.0"
+        }
+      ],
+      "output_schema": {
+        "content": "",
+        "schemaVersion": "",
+        "revisionInfo": {
+          "revisionNumber": "",
+          "revisionDescription": "",
+          "author": "",
+          "revisionDate": ""
+        }
+      }
+    },
+    {
+      "operation": "get_policy_content",
+      "annotation": "get_policy_content",
+      "category": "investigation",
+      "title": "Get Policy Content",
+      "description": "Retrieves the content of the latest version of the policy.",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Policy UUID",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "uuid",
+          "tooltip": "Specify the UUID of the policy.",
+          "description": "Specify the UUID of the policy."
+        }
+      ],
+      "output_schema": {
+        "content": "",
+        "schemaVersion": "",
+        "revisionInfo": {
+          "revisionNumber": "",
+          "revisionDescription": "",
+          "author": "",
+          "revisionDate": ""
+        }
+      }
+    },
+    {
+      "operation": "get_policy_content_by_version",
+      "annotation": "get_policy_content_by_version",
+      "category": "investigation",
+      "title": "Get Policy Content By Version",
+      "description": "Retrieves the content of a specific version of the policy.",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Policy UUID",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "uuid",
+          "tooltip": "Specify the UUID of the policy.",
+          "description": "Specify the UUID of the policy."
+        },
+        {
+          "title": "Version",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "type": "text",
+          "name": "version",
+          "tooltip": "Specify the content version to return.",
+          "description": "Specify the content version to return."
+        }
+      ],
+      "output_schema": {
+        "content": "",
+        "schemaVersion": "",
+        "revisionInfo": {
+          "revisionNumber": "",
+          "revisionDescription": "",
+          "author": "",
+          "revisionDate": ""
+        }
+      }
+    }
+  ]
+}
