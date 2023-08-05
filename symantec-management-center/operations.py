@@ -141,5 +141,3 @@ operations = {
     "get_policy_content": get_policy_content,
     "get_policy_content_by_version": get_policy_content_by_version
 }
-
-# update and delete remaining

@@ -88,7 +88,7 @@
           "type": "text",
           "name": "description",
           "tooltip": "Specify the description of the policy.",
-          "description": "Specify the description of the policy."
+          "description": "(Optional) Specify the description of the policy."
         },
         {
           "title": "Reference ID",
@@ -98,7 +98,7 @@
           "type": "text",
           "name": "referenceId",
           "tooltip": "Specify the reference ID of the policy.",
-          "description": "Specify the reference ID of the policy."
+          "description": "(Optional) Specify the reference ID of the policy."
         },
         {
           "title": "Tenant",
@@ -108,7 +108,7 @@
           "type": "text",
           "name": "tenant",
           "tooltip": "Specify the tenant associated with this policy.",
-          "description": "Specify the tenant associated with this policy."
+          "description": "(Optional) Specify the tenant associated with this policy."
         },
         {
           "title": "Author",
@@ -118,7 +118,7 @@
           "type": "text",
           "name": "author",
           "tooltip": "Specify the author of the policy.",
-          "description": "Specify the author of the policy."
+          "description": "(Optional) Specify the author of the policy."
         },
         {
           "title": "Shared",
@@ -283,7 +283,7 @@
       "annotation": "update_policy",
       "category": "investigation",
       "title": "Update Policy",
-      "description": "Update the metadata based on the parameters that you have specified.",
+      "description": "Update the metadata for the policy based on the parameters that you have specified.",
       "enabled": true,
       "parameters": [
         {
@@ -304,7 +304,7 @@
           "type": "text",
           "name": "name",
           "tooltip": "Specify the name of the policy.",
-          "description": "Specify the name of the policy."
+          "description": "(Optional) Specify the name of the policy."
         },
         {
           "title": "Description",
@@ -314,7 +314,7 @@
           "type": "text",
           "name": "description",
           "tooltip": "Specify the description of the policy.",
-          "description": "Specify the description of the policy."
+          "description": "(Optional) Specify the description of the policy."
         },
         {
           "title": "Reference ID",
@@ -324,7 +324,7 @@
           "type": "text",
           "name": "referenceId",
           "tooltip": "Specify the reference ID of the policy.",
-          "description": "Specify the reference ID of the policy."
+          "description": "(Optional) Specify the reference ID of the policy."
         },
         {
           "title": "Replace Variables",
@@ -334,7 +334,7 @@
           "type": "text",
           "name": "replaceVariables",
           "tooltip": "Specify if you want to replace the variables. By default the checkbox is set to True.",
-          "description": "Specify if you want to replace the variables. By default the checkbox is set to True.",
+          "description": "(Optional) Specify if you want to replace the variables. By default the checkbox is set to True.",
           "value": true
         }
       ],
@@ -374,8 +374,8 @@
           "editable": true,
           "type": "checkbox",
           "name": "force",
-          "tooltip": "Set to true to for force the policy object to be removed even if it is referenced by another policy.",
-          "description": "Set to true to for force the policy object to be removed even if it is referenced by another policy.",
+          "tooltip": "Set to true to force the policy object to be removed even if it is referenced by another policy.",
+          "description": "Set to true to force the policy object to be removed even if it is referenced by another policy.",
           "value": false
         }
       ],
@@ -407,7 +407,7 @@
           "type": "text",
           "name": "changeDescription",
           "tooltip": "Specify the description of the policy content.",
-          "description": "Specify the description of the policy content."
+          "description": "(Optional) Specify the description of the policy content."
         },
         {
           "title": "Content",
@@ -417,7 +417,7 @@
           "type": "text",
           "name": "content",
           "tooltip": "Specify the policy content. This varies depending on the content type.",
-          "description": "Specify the policy content. This varies depending on the content type."
+          "description": "(Optional) Specify the policy content. This varies depending on the content type."
         },
         {
           "title": "Content Type",
@@ -427,7 +427,7 @@
           "type": "text",
           "name": "contentType",
           "tooltip": "Specify the type of content. eg: URL_LIST",
-          "description": "Specify the type of content. eg: URL_LIST"
+          "description": "(Optional) Specify the type of content. eg: URL_LIST"
         },
         {
           "title": "Schema Version",
