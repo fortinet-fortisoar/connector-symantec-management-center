@@ -199,8 +199,8 @@
           "editable": true,
           "type": "text",
           "name": "name",
-          "tooltip": "Query filter parameter to filter by author.",
-          "description": "(Optional) Query filter parameter to filter by author."
+          "tooltip": "Query filter parameter to filter by name.",
+          "description": "(Optional) Query filter parameter to filter by name."
         },
         {
           "title": "Reference ID",
@@ -218,7 +218,7 @@
           "visible": true,
           "editable": true,
           "type": "checkbox",
-          "name": "author",
+          "name": "shared",
           "tooltip": "Use this parameter to filter based on if the policy is shared or not shared.",
           "description": "(Optional) Use this parameter to filter based on if the policy is shared or not shared."
         },

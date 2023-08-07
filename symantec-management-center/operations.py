@@ -17,7 +17,7 @@ class Symantec:
         server_url = config.get("server_url")
         if not server_url.startswith('https://') and not server_url.startswith('http://'):
             server_url = "https://"+server_url
-        self.url = server_url
+        self.url = server_url.strip("/")
         self.username = str(config.get("username"))
         self.password = str(config.get("password"))
         self.verify_ssl = config.get("verify_ssl")
@@ -31,6 +31,11 @@ class Symantec:
             }
             logger.debug(f"\n-------------req start-------------\n{method} - {endpoint}\nparams: {params}\ndata: {data}\n")
             response = request(method, endpoint, headers=headers, auth=(self.username, self.password), params=params, data=json.dumps(data), verify=self.verify_ssl)
+            try:
+                from connectors.debug_utils.curl_script import make_curl
+                make_curl(method, endpoint, headers=headers, params=params, data=json.dumps(data), verify_ssl=self.verify_ssl)
+            except Exception as err:
+                logger.error(f"Error in curl utils: {str(err)}")
 
             if response.status_code in [200, 201, 204]:
                 if response.text != "":
