@@ -1,0 +1,601 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+      "uuid": "98e1bf86-b503-45d8-ad9c-42a50392cb9a",
+      "@type": "WorkflowCollection",
+      "workflows": [
+        {
+          "@type": "Workflow",
+          "uuid": "4401894a-82b4-4696-8804-2d2cb88b33e3",
+          "collection": "/api/3/workflow_collections/98e1bf86-b503-45d8-ad9c-42a50392cb9a",
+          "steps": [
+            {
+              "uuid": "edfd069b-dc73-47b7-af47-3b22bb7a7e64",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "9705e754-d25f-4f75-b638-8ca0bcf80bdf",
+              "@type": "WorkflowStep",
+              "name": "Create Policy",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Symantec Management Center",
+                "config": "''",
+                "params": {
+                  "name": "",
+                  "contentType": "",
+                  "description": "",
+                  "referenceId": "",
+                  "tenant": "",
+                  "author": "",
+                  "shared": "",
+                  "replaceVariables": true
+                },
+                "version": "1.0.0",
+                "connector": "symantec-management-center",
+                "operation": "create_policy",
+                "operationTitle": "Create Policy"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Creates a new policy object based on the parameters that you have specified.",
+          "name": "Create Policy",
+          "tag": "#Symantec Management Center",
+          "recordTags": [
+            "Symantec",
+            "symantec-management-center"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/edfd069b-dc73-47b7-af47-3b22bb7a7e64",
+          "routes": [
+            {
+              "uuid": "20f2884d-2bb6-460c-bd39-f0611fc44979",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Create Policy",
+              "sourceStep": "/api/3/workflow_steps/edfd069b-dc73-47b7-af47-3b22bb7a7e64",
+              "targetStep": "/api/3/workflow_steps/9705e754-d25f-4f75-b638-8ca0bcf80bdf"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "faf84623-2b9f-4fee-b13c-728a0fb9c07f",
+          "collection": "/api/3/workflow_collections/98e1bf86-b503-45d8-ad9c-42a50392cb9a",
+          "steps": [
+            {
+              "uuid": "b15d9ac6-20aa-4006-bac1-546e897a5fb3",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "17e24273-e5d7-4a47-81cf-8c700f967815",
+              "@type": "WorkflowStep",
+              "name": "Get Policies",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Symantec Management Center",
+                "config": "''",
+                "params": {
+                  "author": "",
+                  "contentType": "",
+                  "description": "",
+                  "name": "",
+                  "referenceId": "",
+                  "shared": "",
+                  "tenant": ""
+                },
+                "version": "1.0.0",
+                "connector": "symantec-management-center",
+                "operation": "get_policies",
+                "operationTitle": "Get Policies"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a detailed list of policies from Symantec Management Center based on the parameters that you have specified.",
+          "name": "Get Policies",
+          "tag": "#Symantec Management Center",
+          "recordTags": [
+            "Symantec",
+            "symantec-management-center"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/b15d9ac6-20aa-4006-bac1-546e897a5fb3",
+          "routes": [
+            {
+              "uuid": "c1ea645c-9656-46cf-b602-1084c986668b",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Policies",
+              "sourceStep": "/api/3/workflow_steps/b15d9ac6-20aa-4006-bac1-546e897a5fb3",
+              "targetStep": "/api/3/workflow_steps/17e24273-e5d7-4a47-81cf-8c700f967815"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "7e794089-5434-447c-a81d-842dd1647ebd",
+          "collection": "/api/3/workflow_collections/98e1bf86-b503-45d8-ad9c-42a50392cb9a",
+          "steps": [
+            {
+              "uuid": "47ce2b50-bdc6-4737-a82a-994b9746aa8b",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "d0542bbe-5c30-4e7e-b3a3-7c79912ab4ba",
+              "@type": "WorkflowStep",
+              "name": "Get Policy Details",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Symantec Management Center",
+                "config": "''",
+                "params": {
+                  "uuid": ""
+                },
+                "version": "1.0.0",
+                "connector": "symantec-management-center",
+                "operation": "get_policy_details",
+                "operationTitle": "Get Policy Details"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves the policy details based on the policy UUID that you have specified.",
+          "name": "Get Policy Details",
+          "tag": "#Symantec Management Center",
+          "recordTags": [
+            "Symantec",
+            "symantec-management-center"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/47ce2b50-bdc6-4737-a82a-994b9746aa8b",
+          "routes": [
+            {
+              "uuid": "2e41423b-d38c-43ad-9055-5ba263c2266e",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Policy Details",
+              "sourceStep": "/api/3/workflow_steps/47ce2b50-bdc6-4737-a82a-994b9746aa8b",
+              "targetStep": "/api/3/workflow_steps/d0542bbe-5c30-4e7e-b3a3-7c79912ab4ba"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "83c364c5-b5b6-4b22-8325-dfb3444c05cf",
+          "collection": "/api/3/workflow_collections/98e1bf86-b503-45d8-ad9c-42a50392cb9a",
+          "steps": [
+            {
+              "uuid": "d3b9c664-5a2f-419e-b4e4-114dd09d2b6d",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "aaa329e0-51fa-4852-85c6-b446754d2f01",
+              "@type": "WorkflowStep",
+              "name": "Update Policy",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Symantec Management Center",
+                "config": "''",
+                "params": {
+                  "uuid": "",
+                  "name": "",
+                  "description": "",
+                  "referenceId": "",
+                  "replaceVariables": true
+                },
+                "version": "1.0.0",
+                "connector": "symantec-management-center",
+                "operation": "update_policy",
+                "operationTitle": "Update Policy"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Update the metadata for the policy based on the parameters that you have specified.",
+          "name": "Update Policy",
+          "tag": "#Symantec Management Center",
+          "recordTags": [
+            "Symantec",
+            "symantec-management-center"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/d3b9c664-5a2f-419e-b4e4-114dd09d2b6d",
+          "routes": [
+            {
+              "uuid": "403a42a5-b84a-44e0-8d6f-216efc795de8",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Update Policy",
+              "sourceStep": "/api/3/workflow_steps/d3b9c664-5a2f-419e-b4e4-114dd09d2b6d",
+              "targetStep": "/api/3/workflow_steps/aaa329e0-51fa-4852-85c6-b446754d2f01"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "92f2d0af-407c-4e79-af8a-1b015c461c01",
+          "collection": "/api/3/workflow_collections/98e1bf86-b503-45d8-ad9c-42a50392cb9a",
+          "steps": [
+            {
+              "uuid": "020ed566-51d3-49a4-a4c2-2e6f4ed43343",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "fe8e8bf8-c47c-4596-b627-62d0d8abbda7",
+              "@type": "WorkflowStep",
+              "name": "Delete Policy",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Symantec Management Center",
+                "config": "''",
+                "params": {
+                  "uuid": "",
+                  "force": ""
+                },
+                "version": "1.0.0",
+                "connector": "symantec-management-center",
+                "operation": "delete_policy",
+                "operationTitle": "Delete Policy"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Delete a policy based on the parameters that you have specified.",
+          "name": "Delete Policy",
+          "tag": "#Symantec Management Center",
+          "recordTags": [
+            "Symantec",
+            "symantec-management-center"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/020ed566-51d3-49a4-a4c2-2e6f4ed43343",
+          "routes": [
+            {
+              "uuid": "e4d8560c-82cd-4d44-9a04-3a8c256f78b9",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Delete Policy",
+              "sourceStep": "/api/3/workflow_steps/020ed566-51d3-49a4-a4c2-2e6f4ed43343",
+              "targetStep": "/api/3/workflow_steps/fe8e8bf8-c47c-4596-b627-62d0d8abbda7"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "af7b5130-03f2-4616-bc4f-3744f3d2aba9",
+          "collection": "/api/3/workflow_collections/98e1bf86-b503-45d8-ad9c-42a50392cb9a",
+          "steps": [
+            {
+              "uuid": "b6fa9673-5aaa-49c7-bb72-5a9f69a4003b",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "8bd809d6-c13b-4c35-9449-4a2163ebafe5",
+              "@type": "WorkflowStep",
+              "name": "Add or Update Policy Content",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Symantec Management Center",
+                "config": "''",
+                "params": {
+                  "uuid": "",
+                  "changeDescription": "",
+                  "content": "",
+                  "contentType": "",
+                  "schemaVersion": ""
+                },
+                "version": "1.0.0",
+                "connector": "symantec-management-center",
+                "operation": "add_policy_content",
+                "operationTitle": "Add or Update Policy Content"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Add or update the content of the policy by creating a new version.",
+          "name": "Add or Update Policy Content",
+          "tag": "#Symantec Management Center",
+          "recordTags": [
+            "Symantec",
+            "symantec-management-center"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/b6fa9673-5aaa-49c7-bb72-5a9f69a4003b",
+          "routes": [
+            {
+              "uuid": "50eb0a98-bc1c-43bd-9467-059dc421aaef",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Add or Update Policy Content",
+              "sourceStep": "/api/3/workflow_steps/b6fa9673-5aaa-49c7-bb72-5a9f69a4003b",
+              "targetStep": "/api/3/workflow_steps/8bd809d6-c13b-4c35-9449-4a2163ebafe5"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "20c92157-063a-4b1b-8a3d-ff463a40c8c4",
+          "collection": "/api/3/workflow_collections/98e1bf86-b503-45d8-ad9c-42a50392cb9a",
+          "steps": [
+            {
+              "uuid": "b3a39203-5054-4d0e-b506-c24710179b6e",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "ea3f59be-dce6-43dd-b15d-ffbb576ac797",
+              "@type": "WorkflowStep",
+              "name": "Get Policy Content",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Symantec Management Center",
+                "config": "''",
+                "params": {
+                  "uuid": ""
+                },
+                "version": "1.0.0",
+                "connector": "symantec-management-center",
+                "operation": "get_policy_content",
+                "operationTitle": "Get Policy Content"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves the content of the latest version of the policy.",
+          "name": "Get Policy Content",
+          "tag": "#Symantec Management Center",
+          "recordTags": [
+            "Symantec",
+            "symantec-management-center"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/b3a39203-5054-4d0e-b506-c24710179b6e",
+          "routes": [
+            {
+              "uuid": "c19862e2-407b-4c7b-a401-3b339906503f",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Policy Content",
+              "sourceStep": "/api/3/workflow_steps/b3a39203-5054-4d0e-b506-c24710179b6e",
+              "targetStep": "/api/3/workflow_steps/ea3f59be-dce6-43dd-b15d-ffbb576ac797"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "66ae9226-5329-4ca2-abc5-32c586f8f6f1",
+          "collection": "/api/3/workflow_collections/98e1bf86-b503-45d8-ad9c-42a50392cb9a",
+          "steps": [
+            {
+              "uuid": "84196435-12b8-4e82-bb86-b46d1ebfcd70",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "c2c7fc61-7645-4f74-8a25-9a5b2fe8da7e",
+              "@type": "WorkflowStep",
+              "name": "Get Policy Content By Version",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Symantec Management Center",
+                "config": "''",
+                "params": {
+                  "uuid": "",
+                  "version": ""
+                },
+                "version": "1.0.0",
+                "connector": "symantec-management-center",
+                "operation": "get_policy_content_by_version",
+                "operationTitle": "Get Policy Content By Version"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves the content of a specific version of the policy.",
+          "name": "Get Policy Content By Version",
+          "tag": "#Symantec Management Center",
+          "recordTags": [
+            "Symantec",
+            "symantec-management-center"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/84196435-12b8-4e82-bb86-b46d1ebfcd70",
+          "routes": [
+            {
+              "uuid": "fb9da35f-e94f-46ed-a1b5-df13e66777a9",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Policy Content By Version",
+              "sourceStep": "/api/3/workflow_steps/84196435-12b8-4e82-bb86-b46d1ebfcd70",
+              "targetStep": "/api/3/workflow_steps/c2c7fc61-7645-4f74-8a25-9a5b2fe8da7e"
+            }
+          ]
+        }
+      ],
+      "name": "Sample - Symantec Management Center - 1.0.0",
+      "description": "Symantec Management Center provides a unified management environment for the Symantec Security Platform portfolio of products. Management Center brings Symantec\u2019s network, security, and cloud technologies to you under a single umbrella making it easier to deploy, manage, and monitor your security environment.",
+      "visible": true,
+      "recordTags": [
+        "Symantec",
+        "symantec-management-center"
+      ]
+    }
+  ]
+}
